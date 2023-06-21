@@ -23,6 +23,7 @@ https://github.com/facebookresearch/deepcluster
 
 as defined in satcluster/DeepCluster/example_script.sh
 
+```
 main_sfeatures.py [-h] [--arch ARCH] [--sobel] [--clustering {Kmeans,PIC}]
                [--nmb_cluster NMB_CLUSTER] [--lr LR] [--wd WD]
                [--reassign REASSIGN] [--workers WORKERS] [--epochs EPOCHS]
@@ -62,7 +63,7 @@ optional arguments:
   --features_name       name of image representations to be saved
   --features_epoch      epoch at which image representations are saved (default: 20)
   --verbose             chatty
-
+```
 
 
 
