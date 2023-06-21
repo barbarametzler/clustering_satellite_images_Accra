@@ -1,7 +1,7 @@
 # Clustering satellite images of Accra
 
 Code used for the paper "Phenotyping urban built and natural environments with high-resolution
-satellite images and unsupervised deep learning" published in STOTEN, 2023. \url{https://doi.org/10.1016/j.scitotenv.2023.164794}
+satellite images and unsupervised deep learning" published in STOTEN, 2023. Access here: https://doi.org/10.1016/j.scitotenv.2023.164794
 
 
 The clustering algorithm was adapted from the DeepCluster algorithm by Caron (2018), which was published by Facebook research and
@@ -10,6 +10,7 @@ is also openly available, was run on 3 RTX6000 GPUs, 72GB memory and a runtime o
 https://github.com/facebookresearch/deepcluster
 
 ## Requirements
+
 - Python 3
 - the SciPy and scikit-learn packages
 - a PyTorch install version 0.1.8 (pytorch.org)
@@ -20,23 +21,23 @@ https://github.com/facebookresearch/deepcluster
 
 ## Usage
 
-usage: main_sfeatures.py [-h] [--arch ARCH] [--sobel] [--clustering {Kmeans,PIC}]
+as defined in satcluster/DeepCluster/example_script.sh
+
+main_sfeatures.py [-h] [--arch ARCH] [--sobel] [--clustering {Kmeans,PIC}]
                [--nmb_cluster NMB_CLUSTER] [--lr LR] [--wd WD]
                [--reassign REASSIGN] [--workers WORKERS] [--epochs EPOCHS]
                [--start_epoch START_EPOCH] [--batch BATCH]
                [--momentum MOMENTUM] [--resume PATH]
-               [--checkpoints CHECKPOINTS] [--seed SEED] [--exp EXP]
+               [--checkpoints CHECKPOINTS] [--seed SEED] [--exp EXP] [--features_epoch] [--features_epoch]
                [--verbose]
                DIR
-
-PyTorch Implementation of DeepCluster
 
 positional arguments:
   DIR                   path to dataset
 
 optional arguments:
   -h, --help            show this help message and exit
-  --arch ARCH, -a ARCH  CNN architecture (default: vgg16)
+  --arch ARCH, -a ARCH11CNN architecture (default: vgg16)
   --sobel               Sobel filtering
   --clustering {Kmeans,PIC}
                         clustering algorithm (default: Kmeans)
