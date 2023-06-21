@@ -18,6 +18,52 @@ https://github.com/facebookresearch/deepcluster
 - The ImageNet dataset (which can be automatically downloaded by recent version of torchvision)
 
 
+## Usage
+
+usage: main_sfeatures.py [-h] [--arch ARCH] [--sobel] [--clustering {Kmeans,PIC}]
+               [--nmb_cluster NMB_CLUSTER] [--lr LR] [--wd WD]
+               [--reassign REASSIGN] [--workers WORKERS] [--epochs EPOCHS]
+               [--start_epoch START_EPOCH] [--batch BATCH]
+               [--momentum MOMENTUM] [--resume PATH]
+               [--checkpoints CHECKPOINTS] [--seed SEED] [--exp EXP]
+               [--verbose]
+               DIR
+
+PyTorch Implementation of DeepCluster
+
+positional arguments:
+  DIR                   path to dataset
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --arch ARCH, -a ARCH  CNN architecture (default: vgg16)
+  --sobel               Sobel filtering
+  --clustering {Kmeans,PIC}
+                        clustering algorithm (default: Kmeans)
+  --nmb_cluster NMB_CLUSTER, --k NMB_CLUSTER
+                        number of cluster for k-means (default: 8)
+  --lr LR               learning rate (default: 0.0001)
+  --wd WD               weight decay pow (default: -5)
+  --reassign REASSIGN   how many epochs of training between two consecutive
+                        reassignments of clusters (default: 1)
+  --workers WORKERS     number of data loading workers (default: 4)
+  --epochs EPOCHS       number of total epochs to run (default: 20)
+  --start_epoch START_EPOCH
+                        manual epoch number (useful on restarts) (default: 0)
+  --batch BATCH         mini-batch size (default: 256)
+  --momentum MOMENTUM   momentum (default: 0.9)
+  --resume PATH         path to checkpoint (default: None)
+  --checkpoints CHECKPOINTS
+                        how many iterations between two checkpoints (default:
+                        25000)
+  --seed SEED           random seed (default: 31)
+  --exp EXP             path to exp folder
+  --features_name       name of image representations to be saved
+  --features_epoch      epoch at which image representations are saved (default: 20)
+  --verbose             chatty
+
+
+
 
 ## Data sources
 Building information: https://ui.adsabs.harvard.edu/abs/2019AGUFMIN11D0688H/abstract. The building information is provided in a vector format. We overlaid the vector with a grid that
