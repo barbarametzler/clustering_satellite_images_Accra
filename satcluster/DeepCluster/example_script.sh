@@ -14,7 +14,7 @@ EXP="~/exp/"
 BATCH=128
 RESUME="~/checkpoint.pth.tar"
 
-FEPOCH=2
+FEPOCH=20
 FNAME="/features_"
 mkdir -p ${EXP}
 
