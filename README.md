@@ -21,6 +21,7 @@ https://github.com/facebookresearch/deepcluster
 
 ## Usage
 
+EPSG:32630
 as defined in satcluster/DeepCluster/example_script.sh
 
 ```
@@ -67,6 +68,17 @@ optional arguments:
 
 
 
+## Visualisations
+
+code for visualisations is added in 'visualisations' folder.
+
+### Requirements for visualisations
+- Python 3
+- SciPy, pandas and scikit-learn packages
+- Plotting: Seaborn and matplotlib
+- Sankey diagram: install pySankey2 from https://github.com/SZJShuffle/pySankey2
+
+
 ## Data sources
 Building information: https://ui.adsabs.harvard.edu/abs/2019AGUFMIN11D0688H/abstract. The building information is provided in a vector format. We overlaid the vector with a grid that
 represents the tile size and location. For each measure, we calculated the mean value per tile. Building orientation was computed with the momepy package (Fleischmann, 2019) as deviation of orientation from cardinal directions; it was defined as an orientation of the longest axis of the bounding rectangle in range 0–45 degrees. Building orientation is measured with respect to cardinal directions Building orientation also has a physical relevance for residents, impacting the natural lighting and ventilation.
@@ -78,3 +90,10 @@ Population density: https://www.worldpop.org/geodata/summary?id=6116. We used a 
 
 NDVI: https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-archives-landsat-8-oli-operational-land-imager-and. We use Landsat imagery from 01/01/2020,
 a cloudless day, to calculate the mean NDVI value for each tile.
+
+
+## Final cluster shapefile
+The final cluster shapefile (cluster_shapefile.geojson)is saved as a Geopandas DataFrame with CRS = 'EPSG:32630', which translate to
+WGS 84 / UTM zone 30N.
+
+The Python dictionary for mapping cluster labels to cluster numbers is saved in vis_util.py
