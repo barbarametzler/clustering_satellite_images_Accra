@@ -129,13 +129,15 @@ def main(args):
     #No ImageNet
     #normalize = transforms.Normalize(mean=[0.3057, 0.3173, 0.2933],
     #                                 std=[0.2371, 0.2295, 0.2216])
+    
+    
     tra = [transforms.Resize(256),
-           transforms.CenterCrop(224),
+           #transforms.CenterCrop(224), #transforms.Resize(224)
            #transforms.RandomPerspective(distortion_scale=0.3),
            transforms.ToTensor(),
            normalize]
            
-           
+    ## different augmentations for various experiments
     #tra = [transforms.Resize(256),
     #       transforms.CenterCrop(224),
     #       transforms.RandomGrayscale(p=0.1),
