@@ -6,9 +6,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import PIL
 
-data_set = '~/Imagery/WV2/multi/AMA/ReProj/Clipped_AMA_box/PCA/128/*/'
-#data_set = '/home/bmetzler/Documents/Imagery/Accra/preprocessed/deepcluster/rgb_byte_scaled/'
-#data_set = '/home/bmetzler/Documents/Imagery/Accra/preprocessed/kmeans/kmeans_4_tiles/'
+data_set = '~/Imagery/*/'
 
 def getListOfFiles(dirName):
     # create a list of file and sub directories
@@ -53,7 +51,7 @@ def all_tif_files(dirName):
     return(file_list)
 
 
-with open("/home/bmetzler/Documents/GitHub/deepcluster-master/exp/rgb_2000_vgg/clusters", "rb") as f:
+with open("../clusters", "rb") as f:
     b = pickle.load(f)
     print (b[-1], max(b[-1]))
 
@@ -77,11 +75,11 @@ picture_list = cluster_dict[cluster_number]
 print (len(picture_list))
 
 for num, x in enumerate(picture_list):
-    #print (str(df.loc[x][0]))
+
     if num>= limit: break
     img = PIL.Image.open(str(df.loc[x][0]))
     plt.subplot(rows,5,num+1)
-    #plt.title(x.split('.')[0])
+
     plt.axis('off')
     plt.imshow(img)
 
