@@ -21,7 +21,7 @@ mkdir -p ${EXP}
 module load anaconda3/personal
 
 #CUDA_VISIBLE_DEVICES=0 
-python3 /rds/general/user/abm1818/home/GitHub/deepcluster-master/main_sfeatures.py ${DIR} --exp ${EXP} --arch ${ARCH} \
+python3 /satcluster/DeepCluster/main_sfeatures.py ${DIR} --exp ${EXP} --arch ${ARCH} \
   --lr ${LR} --wd ${WD} --k ${K} --sobel --clustering ${CLUSTERING} --verbose --batch ${BATCH} --workers ${WORKERS} --resume ${RESUME} --features_name ${FNAME} --features_epoch ${FEPOCH}
 
 
