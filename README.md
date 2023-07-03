@@ -92,7 +92,7 @@ a cloudless day, to calculate the mean NDVI value for each tile.
 
 
 ## Final cluster shapefile
-The final cluster shapefile (cluster_shapefile.geojson)is saved as a Geopandas DataFrame with CRS = 'EPSG:32630', which translate to
+The final cluster shapefile (cluster_shapefile.geojson) is saved as a Geopandas DataFrame with CRS = 'EPSG:32630', which refers to
 WGS 84 / UTM zone 30N.
 
 The Python dictionary for mapping cluster labels to cluster numbers is saved in vis_util.py
