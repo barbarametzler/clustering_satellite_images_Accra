@@ -21,7 +21,6 @@ https://github.com/facebookresearch/deepcluster
 
 ## Usage
 
-EPSG:32630
 as defined in satcluster/DeepCluster/example_script.sh
 
 ```
